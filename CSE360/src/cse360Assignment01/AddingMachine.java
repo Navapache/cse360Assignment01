@@ -6,6 +6,7 @@ package cse360Assignment01;
  */
 public class AddingMachine {
   private int total;
+  private String history;
   /**
    * Local variable declarations.
    */
@@ -14,6 +15,7 @@ public class AddingMachine {
 	   * Initializes the object.
 	   */
     total = 0;  // not needed - included for clarity
+    history = "";
   }
   
   public int getTotal () {
@@ -21,7 +23,7 @@ public class AddingMachine {
 	   * This method returns the total.
 	   * @return 0
 	   */
-    return 0;
+    return total;
   }
   
   public void add (int value) {
@@ -29,6 +31,8 @@ public class AddingMachine {
 	   * This method adds the value to the total.
 	   * @param total
 	   */
+	  this.total += value;
+	  history += " + "+value;
   }
 
   public void subtract (int value) {
@@ -36,6 +40,8 @@ public class AddingMachine {
 	   * This method subtracts the value from the total.
 	   * @param total
 	   */
+	  this.total -= value;
+	  history += " - "+value;
   }
 
   public String toString () {
@@ -43,12 +49,14 @@ public class AddingMachine {
 	   * This method returns the history of transactions.
 	   * @return ""
 	   */
-    return "";
+    return history;
   }
 
   public void clear() {
 	  /**
 	   * This method clears the object.
 	   */
+	  history = "";
+	  total = 0;
   }
 }
