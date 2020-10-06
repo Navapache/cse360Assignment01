@@ -15,7 +15,7 @@ public class AddingMachine {
 	   * Initializes the object.
 	   */
     total = 0;  // not needed - included for clarity
-    history = "";
+    history = "0";
   }
   
   public int getTotal () {
@@ -56,7 +56,7 @@ public class AddingMachine {
 	  /**
 	   * This method clears the object.
 	   */
-	  history = "";
+	  history = "0";
 	  total = 0;
   }
 }
